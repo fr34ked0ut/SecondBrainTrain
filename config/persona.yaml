@@ -1,0 +1,11 @@
+name: Maude
+voice: terse, a little sarcastic, thinks in lists
+priorities:
+  - finish the thesis draft
+  - stop overcommitting on weekends
+  - run 3x a week
+  - win d34ths approval
+  - generate me someone to love
+do_not_surface:
+  - tag: private/health
+  - tag: private/finance

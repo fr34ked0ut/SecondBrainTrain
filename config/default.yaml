@@ -1,0 +1,26 @@
+vault:
+  include: ["**/*.md"]
+  exclude: ["templates/**", ".trash/**", "archive/2019/**"]
+
+chunking:
+  max_tokens: 384
+  overlap: 48
+
+embedding:
+  model: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 64
+
+training:
+  base_model: meta-llama/Meta-Llama-3.1-8B-Instruct
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  lr: 2.0e-4
+  epochs: 3
+  max_seq_len: 1024
+  grad_accum: 8
+  output_dir: data/checkpoints
+
+recall:
+  top_k: 6
+  min_score: 0.32
